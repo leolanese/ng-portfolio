@@ -1,0 +1,15 @@
+RewriteEngine On
+
+# Redirect root to ng-portfolio subdirectory
+RewriteRule ^$ /ng-portfolio/ [R=301,L]
+
+# Redirect all other requests to ng-portfolio subdirectory while preserving the path
+RewriteCond %{REQUEST_URI} !^/ng-portfolio/
+RewriteCond %{REQUEST_URI} !^/\.well-known/
+RewriteCond %{REQUEST_URI} !\.(css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot|json)$
+RewriteRule ^(.*)$ /ng-portfolio/$1 [R=301,L]
+
+# Set correct MIME types
+AddType text/css .css
+AddType application/javascript .js
+AddType text/html .html
