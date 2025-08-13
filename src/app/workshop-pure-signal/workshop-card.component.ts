@@ -20,10 +20,16 @@ import { Workshop } from '../types/workshop.types';
           </div>
           <h3 class="workshop-title">{{ workshopItem().title }}</h3>
         </div>
-        <div class="location-date" *ngIf="workshopItem().location || workshopItem().date">
-          <span class="location" *ngIf="workshopItem().location">{{ workshopItem().location }}</span>
-          <span class="date" *ngIf="workshopItem().date">{{ workshopItem().date }}</span>
-        </div>
+        @if (workshopItem().location || workshopItem().date) {
+          <div class="location-date">
+            @if (workshopItem().location) {
+              <span class="location">{{ workshopItem().location }}</span>
+            }
+            @if (workshopItem().date) {
+              <span class="date">{{ workshopItem().date }}</span>
+            }
+          </div>
+        }
       </div>
       
       <div class="card-content">
@@ -256,7 +262,6 @@ export class WorkshopCardComponent {
   protected handleCardClick(): void {
     this.workshopSelected.emit(this.workshopItem());
     this.workshopSignalService.setSelectedWorkshop(this.workshopItem());
-    console.log('Workshop selected in Workshop Card component:', this.workshopItem());
   }
 
   protected getLinkText(): string {
