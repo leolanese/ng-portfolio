@@ -1,24 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject, input, output } from '@angular/core';
-import { ApiService } from '../api.signal.service';
+
 import { User } from '../types/user.types';
+
+import { ApiSignalService } from '../shared/api.signal.service';
 
 @Component({
   selector: 'app-child-card-pure-signal',
   imports: [CommonModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <article 
-      class="card" 
-      role="listitem"
-      tabindex="0"
-      (click)="handleCardClick()">
-      <div class="card-content">
-        <h3 class="user-name">{{ childItem().name }}</h3>
-        <p class="user-email">{{ childItem().email }}</p>
-        <p class="user-company">{{ childItem().company.name }}</p>
-      </div>
-    </article>
   `,
   styles: `
     .card {
@@ -70,18 +61,13 @@ import { User } from '../types/user.types';
   `
 })
 export class ChildCardPureSignalComponent {
-  // Child Component
-
-  // Input signal for user data
   readonly childItem = input.required<User>(); 
-  // Output signal for user selection
   readonly userSelected = output<User>();
-
-  private readonly apiService = inject(ApiService);
+  private readonly apiSignalService = inject(ApiSignalService);
 
   protected handleCardClick(): void {
     this.userSelected.emit(this.childItem());
-    this.apiService.setSelectedUser(this.childItem());
+    this.apiSignalService.setSelectedUser(this.childItem());
     console.log('User selected in Child component:', this.childItem());
   }
 }

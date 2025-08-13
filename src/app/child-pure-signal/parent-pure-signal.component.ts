@@ -1,16 +1,15 @@
 import { JsonPipe } from '@angular/common';
-import { ChangeDetectionStrategy, Component, computed, inject, input, signal } from '@angular/core';
-import { ApiService } from '../api.signal.service';
+import { ChangeDetectionStrategy, Component, inject, input } from '@angular/core';
 import { User } from '../types/user.types';
 import { ChildCardPureSignalComponent } from './child-pure-signal.component';
+
+import { ApiSignalService } from '../shared/api.signal.service';
 
 @Component({
   selector: 'app-parent-pure-signal',
   imports: [ChildCardPureSignalComponent, JsonPipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <p>{{ title }}</p>
-    
     @if (isLoading()) {
       <div class="loading-state">
         <p>{{ loadingMessage() }}</p>
@@ -77,34 +76,19 @@ import { ChildCardPureSignalComponent } from './child-pure-signal.component';
   `
 })
 export class ParentPureSignalComponent {
-  title = '/child-pure-signal';
-  // Modern Parent Component with Writable Signals
-
-  private readonly apiService = inject(ApiService);
-   
-  // Writable signals for reactive state management
-  private readonly selectedUserSignal = signal<User | null>(null);
+  private readonly apiSignalService = inject(ApiSignalService);
   
-  // Computed signals for derived state
-  readonly isLoading = computed(() => this.apiService.isLoading());
-  readonly isError = computed(() => this.apiService.isError());
-  readonly users = computed(() => this.apiService.items());
-  readonly selectedUser = this.selectedUserSignal.asReadonly();
-  readonly errorDetails = computed(() => this.apiService.isError());
+  readonly isLoading = this.apiSignalService.isLoading;
+  readonly isError = this.apiSignalService.isError;
+  readonly users = this.apiSignalService.items;
+  readonly selectedUser = this.apiSignalService.selectedUser;
+  readonly errorDetails = this.apiSignalService.isError;
    
-  // Optional inputs with default values
   readonly loadingMessage = input('Loading users...');
   readonly errorMessage = input('An error occurred while loading users');
   readonly emptyMessage = input('No users found');
    
   protected handleUserSelection(user: User): void {
-    // Update local state through writable signal
-    this.selectedUserSignal.set(user);
-    
-    // Also update shared service state
-    this.apiService.setSelectedUser(user);
-    
-    console.log('User selected in Parent Component:', user);
-    console.log('Parent state updated via writable signal');
+    this.apiSignalService.setSelectedUser(user);
   }
 }
