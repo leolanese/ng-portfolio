@@ -1,15 +1,17 @@
+import { Location } from '@angular/common';
 import { HttpErrorResponse, httpResource } from '@angular/common/http';
-import { computed, Injectable, signal } from '@angular/core';
+import { computed, inject, Injectable, signal } from '@angular/core';
 import { Experience } from './../types/experience.types';
 
 @Injectable({ providedIn: 'root' })
 export class ExperienceSignalService {
-  private readonly baseUrl = 'https://raw.githubusercontent.com/leolanese/React-ContextAPI-portfolio/refs/heads/master/src/resources/experience.json';
+  private readonly location = inject(Location);
+  private readonly experienceUrl = this.location.prepareExternalUrl('/experience.json');
 
   private readonly selectedExperienceSignal = signal<Experience | null>(null);
 
   private readonly experienceResource = httpResource<Experience[]>(() => ({
-    url: this.baseUrl,
+    url: this.experienceUrl,
     method: 'GET',
     headers: {
       accept: 'application/json'
@@ -23,7 +25,7 @@ export class ExperienceSignalService {
   readonly selectedExperience = this.selectedExperienceSignal.asReadonly();
 
   readonly hasExperiences = computed(() => this.items().length > 0);
-  readonly experienceCount = computed(() => 15);
+  readonly experienceCount = computed(() => this.items().length);
 
   readonly errorDetails = computed(() => this.isError());
   

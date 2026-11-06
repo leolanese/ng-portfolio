@@ -1,0 +1,132 @@
+[
+  {
+    "id": 5,
+    "techs": ["angular", "nestjs", "ai", "rag"],
+    "company": "AffordableTax Platform",
+    "role": "Senior Angular Engineer | Full-Stack Agentic AI (self-employed)",
+    "date": "09/2026 - Present",
+    "country": "UK",
+    "info": "",
+    "description": "Modernising Angular 19–22+ / NGXS with NestJS/PostgreSQL and a Modular RAG + multi-agent HITL workflow. Delivered ~30% faster processing, ~40% token reduction, and 99.5% task completion via confidence-gated agent handoffs."
+  },
+  {
+    "id": 10,
+    "techs": ["angular", "signals", "module-federation", "ai"],
+    "company": "Eque2 (Sage Partner Construction App)",
+    "role": "Senior Angular Engineer | Full-Stack Agentic AI (contract)",
+    "date": "09/2025 - 08/2026",
+    "country": "UK",
+    "info": "https://www.eque2.com/",
+    "description": "Modernised Module Federation / NGXS Angular (v17→v22) on Azure with Signals and event-driven streams (~45% render gain, ~60% less state boilerplate). Built an Agentic SDLC / E2E healing loop → ~56% fewer support calls and ~30% faster delivery."
+  },
+  {
+    "id": 15,
+    "techs": ["angular", "aws", "signals", "agile"],
+    "company": "PayLink (Nationwide Banking)",
+    "role": "Senior Angular Engineer (FTC contract)",
+    "date": "05/2025 - 08/2025",
+    "country": "UK",
+    "info": "http://www.paylinksolutions.co.uk",
+    "description": "Built Angular 17–21+ multi-tenant B2B SaaS with AWS S3 runtime UI/feature config. Batched Signals updates to cut Change Detection storms → ~30% better UI performance and a leaner codebase."
+  },
+  {
+    "id": 20,
+    "techs": ["angular", "nestjs", "typescript", "analytics"],
+    "company": "Topple Digital Advertising Platform",
+    "role": "Senior Angular Engineer | Full-Stack (contract)",
+    "date": "11/2024 - 04/2025",
+    "country": "UK",
+    "info": "https://wearetoppe.com/",
+    "description": "Re-engineered B2C SaaS to Angular 17–19+ (~20% fewer bugs). NestJS multi-strategy caching cut P95 latency ~25% and sped landing loads ~35%."
+  },
+  {
+    "id": 25,
+    "techs": ["angular", "nestjs", "postgresql", "hmrc"],
+    "company": "AffordableTax Platform",
+    "role": "Senior Angular Engineer | Full-Stack (self-employed)",
+    "date": "01/2024 - 10/2024",
+    "country": "UK",
+    "info": "",
+    "description": "Founded an HMRC-compliant tax platform (Angular 17→19, NestJS, Prisma/PostgreSQL) with Xero/QuickBooks and full HMRC submit/poll pipeline → ~80% less manual filing work."
+  },
+  {
+    "id": 30,
+    "techs": ["angular", "ssr", "module-federation", "analytics"],
+    "company": "The WorkShop Technologies",
+    "role": "Senior Angular Engineer | Full-Stack (contract)",
+    "date": "07/2023 - 01/2024",
+    "country": "UK",
+    "info": "https://theworkshop.com/",
+    "description": "Rebuilt B2B SaaS with Angular Universal SSR and Module Federation → ~30% better Web Vitals. Matomo insights drove TTI fixes and ~15% higher conversion."
+  },
+  {
+    "id": 35,
+    "techs": ["angular", "sentry", "lighthouse", "agile"],
+    "company": "Abu Dhabi Securities Financial",
+    "role": "Senior Angular Engineer (contract)",
+    "date": "11/2022 - 06/2023",
+    "country": "UK",
+    "info": "https://www.adss.com/",
+    "description": "Improved Angular KYC / identity flows (~35% higher completion, ~30% fewer drop-offs). Added Sentry logging and Lighthouse CI for ongoing UX quality."
+  },
+  {
+    "id": 40,
+    "techs": ["angular", "aws", "cypress", "agile"],
+    "company": "Luno Financial Services",
+    "role": "Senior Angular Engineer (contract)",
+    "date": "09/2021 - 10/2022",
+    "country": "UK (Remote)",
+    "info": "https://www.luno.com/",
+    "description": "Re-engineered a DeFi crypto wallet (Angular 15+, AWS Lambda, MFA/Stripe) → ~50% better task completion. Cypress + mutation testing cut release cycle from 5 days to 1."
+  },
+  {
+    "id": 45,
+    "techs": ["angular", "ngrx", "aws", "agile"],
+    "company": "Queensmith (Vashi)",
+    "role": "Senior Angular Engineer / Full-Stack (contract)",
+    "date": "09/2020 - 09/2021",
+    "country": "UK",
+    "info": "https://www.vashi.com/",
+    "description": "Delivered responsive NgRx Angular 12+ B2C flows → ~15–20% conversion lift. Dockerised AWS ECS test environments to strengthen QA reliability."
+  },
+  {
+    "id": 50,
+    "techs": ["angular", "typescript", "docker", "aws"],
+    "company": "New Look Fashion Retailer",
+    "role": "Senior Angular Engineer (contract)",
+    "date": "01/2020 - 08/2020",
+    "country": "UK",
+    "info": "https://www.newlook.com/",
+    "description": "Delivered Angular 11+ B2C eCommerce with microservices and Docker/AWS CloudFormation foundations later adopted as team standard → ~10% conversion lift."
+  },
+  {
+    "id": 55,
+    "techs": ["angular", "ngrx", "typescript", "devsecops"],
+    "company": "LexisNexis Financial Services (Accuity)",
+    "role": "Lead Angular Engineer (contract)",
+    "date": "06/2019 - 12/2019",
+    "country": "UK",
+    "info": "https://accuity.com/",
+    "description": "Led an 8-person team on B2B Angular 8+ / NgRx financial crime screening. Shift-left DevSecOps in CI/CD cut vulnerabilities and late security blockers."
+  },
+  {
+    "id": 60,
+    "techs": ["angular", "ngrx", "micro-frontends", "agile"],
+    "company": "Mimecast Cloud Cybersecurity",
+    "role": "Lead Angular Engineer (permanent)",
+    "date": "04/2017 - 05/2019",
+    "country": "UK",
+    "info": "https://www.mimecast.com/",
+    "description": "Architected NgRx/Facade Angular 8+ micro-frontends with pub/sub (~30% less complexity). Led a 10-person team migrating to reusable, loosely coupled UI components."
+  },
+  {
+    "id": 65,
+    "techs": ["angularjs", "cordova", "typescript", "agile"],
+    "company": "Metropolitan Digital Police",
+    "role": "Lead Angular Engineer (contract)",
+    "date": "10/2014 - 03/2017",
+    "country": "UK",
+    "info": "https://www.met.police.uk/",
+    "description": "Led a 12-person team delivering a Cordova hybrid emergency-management app with offline support → faster MetCC response and lower operational cost."
+  }
+]

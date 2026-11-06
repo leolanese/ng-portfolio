@@ -213,6 +213,12 @@ import { Experience } from '../types/experience.types';
       border-color: #f39c12;
     }
 
+    .tech-badge.ai {
+      background: linear-gradient(135deg, #0d9488, #0f766e);
+      color: white;
+      border-color: #0d9488;
+    }
+
     .date-location {
       display: flex;
       flex-direction: column;

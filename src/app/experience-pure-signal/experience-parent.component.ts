@@ -261,7 +261,7 @@ export class ExperienceParentComponent {
     return [...new Set(allTechs)].sort();
   }
    
-  readonly subtitle = input('Senior Angular Front-End Developer | User-Centric UX & Analytics');
+  readonly subtitle = input('Senior Angular Engineer | Full-Stack Agentic AI');
   readonly loadingMessage = input('Loading professional experience...');
   readonly errorMessage = input('An error occurred while loading experience data');
   readonly emptyMessage = input('No experience data found');
